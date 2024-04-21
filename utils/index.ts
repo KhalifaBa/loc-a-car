@@ -24,7 +24,7 @@ export async function fetchCars(filter: FilterProps) {
 
   // Set the required headers for the API request
   const response = await fetch(
-    `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?&model=${modele}&make=${marque}&year=${annee}&limit=${limit}&fuel_type=${energie}`,
+    `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=${modele}&make=${marque}&year=${annee}&limit=${limit}&fuel_type=${energie}`,
     {
       headers: headers,
     }
@@ -32,7 +32,6 @@ export async function fetchCars(filter: FilterProps) {
 
   // Parse the response as JSON
   const result = await response.json();
-  console.log(result);
   return result;
 }
 export const updateSearchParams = (type: string, value: string) => {

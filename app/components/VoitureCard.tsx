@@ -20,6 +20,8 @@ const VoitureCard = ({ voiture }: VoitureCardProps) => {
         return "Propulsion";
       case "AWD":
         return "Intégrale";
+      case "4WD":
+        return "Intégrale";
     }
   };
   const mpgToKmPerL = (mpg: number) => {

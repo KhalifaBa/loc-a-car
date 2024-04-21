@@ -33,9 +33,9 @@ const BarreRecherche = () => {
     const paramRecherche = new URLSearchParams(window.location.search);
 
     if (model) {
-      paramRecherche.set("model", modele);
+      paramRecherche.set("modele", modele);
     } else {
-      paramRecherche.delete("model");
+      paramRecherche.delete("modele");
     }
 
     if (marque) {
@@ -69,7 +69,7 @@ const BarreRecherche = () => {
           name="Modèle"
           value={model}
           onChange={(e) => setModel(e.target.value)}
-          placeholder="Tiguan"
+          placeholder="Polo"
           className="searchbar__input"
         />
         <BouttonRecherche other_class="sm:hidden" />
