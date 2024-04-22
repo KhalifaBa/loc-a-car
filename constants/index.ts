@@ -43,7 +43,7 @@ export const manufacturers = [
 ];
 
 export const yearsOfProduction = [
-  { title: "Year", value: "" },
+  { title: "Année", value: "" },
   { title: "2015", value: "2015" },
   { title: "2016", value: "2016" },
   { title: "2017", value: "2017" },
@@ -53,19 +53,20 @@ export const yearsOfProduction = [
   { title: "2021", value: "2021" },
   { title: "2022", value: "2022" },
   { title: "2023", value: "2023" },
+  { title: "2024", value: "2024" },
 ];
 
 export const fuels = [
   {
-    title: "Fuel",
+    title: "Energie",
     value: "",
   },
   {
-    title: "Gas",
+    title: "Essence",
     value: "Gas",
   },
   {
-    title: "Electricity",
+    title: "Electrique",
     value: "Electricity",
   },
 ];

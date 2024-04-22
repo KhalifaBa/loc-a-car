@@ -7,6 +7,7 @@ import FiltrePerso from "./FiltrePerso";
 import Marque from "./Marque";
 import VoitureCard from "./VoitureCard";
 import DetailVoiture from "./DetailVoiture";
+import VoirPlus from "./VoirPlus";
 
 export {
   Hero,
@@ -18,4 +19,5 @@ export {
   Marque,
   VoitureCard,
   DetailVoiture,
+  VoirPlus,
 };

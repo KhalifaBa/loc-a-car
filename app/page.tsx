@@ -1,7 +1,14 @@
 import { fetchCars } from "@/utils";
-import { Hero, FiltrePerso, BarreRecherche, VoitureCard } from "./components";
+import {
+  Hero,
+  FiltrePerso,
+  BarreRecherche,
+  VoitureCard,
+  VoirPlus,
+} from "./components";
 import { FilterProps } from "@/types";
 import Image from "next/image";
+import { fuels, yearsOfProduction } from "@/constants";
 
 export default async function Home({
   searchParams,
@@ -33,11 +40,11 @@ export default async function Home({
           </h1>
           <p>Chercher la voiture qui vous convient</p>
         </div>
-        <div className="home_filters">
+        <div className="home__filters">
           <BarreRecherche />
           <div className="home__filter-container">
-            <FiltrePerso titre="energie" />
-            <FiltrePerso titre="annee" />
+            <FiltrePerso titre="energie" options={fuels} />
+            <FiltrePerso titre="annee" options={yearsOfProduction} />
           </div>
         </div>
 
@@ -57,6 +64,10 @@ export default async function Home({
                 <VoitureCard voiture={car} />
               ))}
             </div>
+            <VoirPlus
+              nbPage={(searchParams.limit || 10) / 10}
+              estSuivant={(searchParams.limit || 10) > allCars.length}
+            />
           </section>
         )}
       </div>
