@@ -5,7 +5,7 @@ import {
   BarreRecherche,
   VoitureCard,
   VoirPlus,
-} from "./components";
+} from "../components";
 import { FilterProps } from "@/types";
 import Image from "next/image";
 import { fuels, yearsOfProduction } from "@/constants";
